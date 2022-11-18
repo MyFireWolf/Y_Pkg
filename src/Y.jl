@@ -1,6 +1,7 @@
 module Y
 
-using Sockets
-
+function t()
+    println("Y.t")
+end
 
 end # module Y
