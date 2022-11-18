@@ -1,5 +1,5 @@
 module Y_Pkg
 
-greet() = print("Hello World!")
+greet() = println("Hello World!")
 
 end # module Y_Pkg
