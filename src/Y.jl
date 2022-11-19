@@ -1,6 +1,12 @@
 module Y
+#= 
+using Base64   
+         需要使用Base64模块，则编辑 当前包文件夹的Project.toml文件：
+         添加如下内容
+                [deps] 
+                Base64 = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
+=#
 
-#using Base64
 using GLFW
 export
     showwindows
