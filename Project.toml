@@ -3,5 +3,6 @@ uuid = "432ce252-e27d-449a-9c34-fd3a177e3b7f"
 authors = ["YXT <522828368@qq.com>"]
 version = "0.1.0" 
 
-[deps]
-GLFW = "f7f18e0c-5ee9-5ccd-a5bf-e8befd85ed98"
+
+[compat]
+GLFW = "3.2.0,3.3.0,3.4.0"
