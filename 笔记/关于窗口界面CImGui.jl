@@ -62,7 +62,7 @@ ImGui_ImplGlfw_InitForOpenGL(window, true)
 ImGui_ImplOpenGL3_Init(glsl_version)
 
 try
-    show_demo_window = true
+    show_demo_window = false  #true
     show_another_window = false
     clear_color = Cfloat[0.45, 0.55, 0.60, 1.00]
     while !GLFW.WindowShouldClose(window)
@@ -91,6 +91,17 @@ try
             CImGui.Text("counter = $counter")
             CImGui.Text(@sprintf("Application average %.3f ms/frame (%.1f FPS)", 1000 / CImGui.GetIO().Framerate, CImGui.GetIO().Framerate))
 
+            if CImGui.TreeNode("TreeNode")                
+                @c CImGui.Checkbox("中文Another Window", &show_another_window)
+    
+                @c CImGui.SliderFloat("float label", &f, 0, 1)  # edit 1 float using a slider from 0 to 1
+                CImGui.Button("Button") && (counter += 1)
+    
+                CImGui.SameLine()
+                CImGui.Text("counter = $counter")
+
+                CImGui.TreePop()
+            end
             CImGui.End()
         end
 
