@@ -77,7 +77,7 @@ try
 
         # show a simple window that we create ourselves.
         # we use a Begin/End pair to created a named window.
-        @cstatic f=Cfloat(0.0) counter=Cint(0) begin
+        @cstatic f = Cfloat(0.0) counter = Cint(0) begin
             CImGui.Begin("Hello, world!")  # create a window called "Hello, world!" and append into it.
             CImGui.Text("This is some useful text.")  # display some text
             @c CImGui.Checkbox("Demo Window", &show_demo_window)  # edit bools storing our window open/close state
@@ -91,12 +91,12 @@ try
             CImGui.Text("counter = $counter")
             CImGui.Text(@sprintf("Application average %.3f ms/frame (%.1f FPS)", 1000 / CImGui.GetIO().Framerate, CImGui.GetIO().Framerate))
 
-            if CImGui.TreeNode("TreeNode")                
+            if CImGui.TreeNode("TreeNode")
                 @c CImGui.Checkbox("中文Another Window", &show_another_window)
-    
+
                 @c CImGui.SliderFloat("float label", &f, 0, 1)  # edit 1 float using a slider from 0 to 1
                 CImGui.Button("Button") && (counter += 1)
-    
+
                 CImGui.SameLine()
                 CImGui.Text("counter = $counter")
 
@@ -109,7 +109,7 @@ try
         if show_another_window
             @c CImGui.Begin("Another Window", &show_another_window)  # pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
             CImGui.Text("Hello from another window!")
-            CImGui.Button("Close Me") && (show_another_window = false;)
+            CImGui.Button("Close Me") && (show_another_window = false)
             CImGui.End()
         end
 
@@ -126,7 +126,7 @@ try
         GLFW.SwapBuffers(window)
     end
 catch e
-    @error "Error in renderloop!" exception=e
+    @error "Error in renderloop!" exception = e
     Base.show_backtrace(stderr, catch_backtrace())
 finally
     ImGui_ImplOpenGL3_Shutdown()
