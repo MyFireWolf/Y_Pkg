@@ -30,3 +30,4 @@ _WinMain@16:
 
 ;配置环境变量：
 ;右击“计算机” -->属性 -->高级系统设置 -->环境环境 -->系统变量 -->“Path”变量 -->编辑，追加 ;E:\mingw\bin 
+;lZDI1NTE5AAAAIOQ5VmsKFxDK4GjktRzYrDZ2wyrNJ9/wwDNSM2O658c1 522828368@qq.com
